@@ -13,7 +13,11 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} 
+        options={{
+          headerBackVisible: false,
+        }}
+        />
         <Stack.Screen name="SignUp" component={SignUp} />
         
       </Stack.Navigator>

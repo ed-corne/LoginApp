@@ -90,10 +90,10 @@ export default class SignUp extends Component {
                     result={this.state.result}
                     ></AlertGreen>
 
-                    <View style={{ position: 'absolute', bottom: -170, right: 0 }}>
+                    <View style={{ position: 'absolute', bottom: -160, right: 0 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center', padding: 10 }}>
                             <Text style={{ marginRight: 10 }}>Already have an account?</Text>
-                            <TouchableOpacity onPress={() => console.log("Login") } >
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Login') } >
                                 <Text style={styles.txtSubTittle}>Login</Text>
                             </TouchableOpacity>
                         </View>
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end'
     },
     containerTittle: {
-        margin: 30
+        margin: 10
     },
     txtSingUp: {
         fontSize: 32,
@@ -156,42 +156,5 @@ const styles = StyleSheet.create({
         width: 90,
         borderRadius: 20,
         marginTop: 10
-    },
-    centeredView: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 22,
-      },
-    modalView: {
-        margin: 20,
-        backgroundColor: 'white',
-        borderRadius: 20,
-        padding: 35,
-        alignItems: 'center',
-        shadowColor: '#000',
-        shadowOffset: {
-          width: 0,
-          height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        elevation: 5,
-      },
-
-      buttonClose: {
-        backgroundColor: '#7ED957',
-        borderRadius: 20,
-        padding: 10,
-        elevation: 2,
-      },
-      textStyle: {
-        color: 'white',
-        fontWeight: 'bold',
-        textAlign: 'center',
-      },
-      modalText: {
-        marginBottom: 15,
-        textAlign: 'center',
-      },
+    }
 })

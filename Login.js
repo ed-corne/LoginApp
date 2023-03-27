@@ -37,7 +37,8 @@ export default class Login extends Component {
                     }
                     else {
                         console.log("valid data");
-                        _this.props.navigation.navigate("HomeScreen", {name: _this.state.result});
+                        //_this.props.navigation.navigate("HomeScreen", {name: _this.state.result});
+                        _this.props.navigation.replace('HomeScreen', {name: _this.state.result});
                     }
                 }
             };
