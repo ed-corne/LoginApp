@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
 modalView: {
     margin: 20,
-    backgroundColor: 'white',
+    backgroundColor: '#F6F6F6',
     borderRadius: 20,
     padding: 35,
     alignItems: 'center',
@@ -47,7 +47,7 @@ modalView: {
   },
 
   buttonClose: {
-    backgroundColor: '#7ED957',
+    backgroundColor: '#2F2F2F',
     borderRadius: 20,
     padding: 10,
     elevation: 2,
@@ -63,4 +63,4 @@ modalView: {
   },
 })
 
-export default AlertGreen
+export default AlertGreen;

@@ -1,10 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Login from './Login';
-import SignUp from './SignUp';
-import HomeScreen from './HomeScreen';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Login from "./screens/Login";
+import SignUp from "./screens/SignUp";
+import TabNavigation from "./TabNavigation";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,14 +12,30 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} 
-        options={{
-          headerBackVisible: false,
-        }}
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{
+            headerStyle: { backgroundColor: "#2F2F2F" },
+            headerTitleStyle: { color: "#FFF" },
+          }}
         />
-        <Stack.Screen name="SignUp" component={SignUp} />
-        
+        <Stack.Screen
+          name="HomeScreen"
+          component={TabNavigation}
+          options={{
+            headerBackVisible: false,
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="SignUp"
+          component={SignUp}
+          options={{
+            headerStyle: { backgroundColor: "#2F2F2F" },
+            headerTitleStyle: { color: "#FFF" },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -28,9 +44,9 @@ function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
