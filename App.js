@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./screens/Login";
-import SignUp from "./screens/SignUp";
 import TabNavigation from "./TabNavigation";
 
 const Stack = createNativeStackNavigator();
@@ -13,7 +12,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Login"
+          name="NBA APP"
           component={Login}
           options={{
             headerStyle: { backgroundColor: "#2F2F2F" },
@@ -26,14 +25,6 @@ function App() {
           options={{
             headerBackVisible: false,
             headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="SignUp"
-          component={SignUp}
-          options={{
-            headerStyle: { backgroundColor: "#2F2F2F" },
-            headerTitleStyle: { color: "#FFF" },
           }}
         />
       </Stack.Navigator>
