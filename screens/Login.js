@@ -37,9 +37,8 @@ const Login = (props) => {
         } else if (xhttp.responseText == -1) {
           setResult("Invalid credentials or you have not verified your email");
         } else {
-          props.navigation.replace("HomeScreen", {
-            name: xhttp.responseText,
-          });
+          props.navigation.replace('TabNavigation', { name: xhttp.responseText });
+          console.log("my log: "+xhttp.responseText);
         }
       }
     };

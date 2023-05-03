@@ -20,7 +20,7 @@ function App() {
           }}
         />
         <Stack.Screen
-          name="HomeScreen"
+          name="TabNavigation"
           component={TabNavigation}
           options={{
             headerBackVisible: false,

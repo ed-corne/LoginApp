@@ -19,13 +19,14 @@ const Games = () => {
         setDataLeagues(datos.response);
       }
     };
-    xhttp.open("GET", "https://edcorne.000webhostapp.com/leagues.php", true);
+    xhttp.open("GET", "https://edcorne.000webhostapp.com/games.php", true);
     xhttp.send();
   }, []);
 
   return (
     <Layaut>
       <Text style={styles.text}>NBA Games</Text>
+      
       <FlatList
         data={dataLeagues}
         renderItem={({ item }) => (
