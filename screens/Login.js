@@ -34,9 +34,12 @@ const Login = (props) => {
         //console.log("resultado = " + _this.state.result);
         if (xhttp.responseText == 0) {
           setResult("Empty data");
+          showModal();
         } else if (xhttp.responseText == -1) {
           setResult("Invalid credentials or you have not verified your email");
+          showModal();
         } else {
+          setResult("welcome");
           props.navigation.replace('TabNavigation', { name: xhttp.responseText });
           console.log("my log: "+xhttp.responseText);
         }
@@ -51,9 +54,6 @@ const Login = (props) => {
       true
     );
     xhttp.send();
-    showModal();
-    console.log(email);
-    console.log(password);
   };
 
   const userregistration = () => {
@@ -203,7 +203,7 @@ const styles = StyleSheet.create({
     height: 170,
     position: "absolute",
     top: 40,
-    right: -40,
+    right: -30,
   },
   imgContainer: {
     position: "relative",
@@ -216,14 +216,14 @@ const styles = StyleSheet.create({
   },
   txtLogin: {
     fontSize: 32,
-    color: "#FFCB74",
+    color: "#74C2FF",
     fontWeight: "bold",
   },
   txtSubTittle: {
     color: "#FFF",
   },
   txtSubText: {
-    color: "#FFCB74",
+    color: "#74C2FF",
   },
   inputData: {
     height: 40,
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
   },
   btnLogin: {
     alignItems: "center",
-    backgroundColor: "#FFCB74",
+    backgroundColor: "#74C2FF",
     padding: 10,
     width: 90,
     borderRadius: 20,

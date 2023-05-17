@@ -1,4 +1,4 @@
-import { View, StyleSheet, StatusBar } from "react-native";
+import { View, StyleSheet, StatusBar, ScrollView } from "react-native";
 import React from "react";
 
 const Layaut = ({ children }) => {

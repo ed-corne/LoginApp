@@ -13,7 +13,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Teams from "./screens/Teams";
 import Games from "./screens/Games";
 import HomeScreen from "./screens/HomeScreen";
-import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
+import { AntDesign, MaterialCommunityIcons, Ionicons  } from "@expo/vector-icons";
+import Players from "./screens/Players";
 
 const TabNavigation = (props) => {
   const Tab = createBottomTabNavigator();
@@ -27,7 +28,7 @@ const TabNavigation = (props) => {
         options={{
           headerShown: false,
           tabBarActiveTintColor: "#F6F6F6",
-          tabBarActiveBackgroundColor: "#FFCB74",
+          tabBarActiveBackgroundColor: "#74C2FF",
           tabBarStyle: {
             backgroundColor: "#2F2F2F",
             borderTopColor: "#111111",
@@ -41,17 +42,13 @@ const TabNavigation = (props) => {
         options={{
           headerShown: false,
           tabBarActiveTintColor: "#F6F6F6",
-          tabBarActiveBackgroundColor: "#FFCB74",
+          tabBarActiveBackgroundColor: "#74C2FF",
           tabBarStyle: {
             backgroundColor: "#2F2F2F",
             borderTopColor: "#111111",
           },
           tabBarIcon: () => (
-            <MaterialCommunityIcons
-              name="vector-link"
-              size={24}
-              color="white"
-            />
+            <MaterialCommunityIcons name="basketball-hoop-outline" size={24} color="white" />
           ),
         }}
       />
@@ -61,12 +58,26 @@ const TabNavigation = (props) => {
         options={{
           headerShown: false,
           tabBarActiveTintColor: "#F6F6F6",
-          tabBarActiveBackgroundColor: "#FFCB74",
+          tabBarActiveBackgroundColor: "#74C2FF",
           tabBarStyle: {
             backgroundColor: "#2F2F2F",
             borderTopColor: "#111111",
           },
           tabBarIcon: () => <AntDesign name="team" size={24} color="white" />,
+        }}
+      />
+      <Tab.Screen
+        name="Players"
+        component={Players}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: "#F6F6F6",
+          tabBarActiveBackgroundColor: "#74C2FF",
+          tabBarStyle: {
+            backgroundColor: "#2F2F2F",
+            borderTopColor: "#111111",
+          },
+          tabBarIcon: () => <Ionicons name="basketball-outline" size={24} color="white" />,
         }}
       />
     </Tab.Navigator>
